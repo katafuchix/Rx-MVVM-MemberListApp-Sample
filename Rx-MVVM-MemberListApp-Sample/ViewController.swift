@@ -35,6 +35,7 @@ class ViewController: UIViewController {
     }
     
     func bind() {
+        
         // メンバー一覧
         self.viewModel.outputs
             .members
