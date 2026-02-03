@@ -13,6 +13,14 @@ struct Member: Codable {
     let avatar: String
     let job: String
     let age: Int
+    
+    init(id: Int, name: String, avatar: String, job: String, age: Int) {
+        self.id = id
+        self.name = name
+        self.avatar = avatar
+        self.job = job
+        self.age = age
+    }
 }
 
 extension Member {

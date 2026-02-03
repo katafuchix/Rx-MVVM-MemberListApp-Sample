@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var loadButton: UIButton!
     
-    let viewModel = ViewModel()
+    let viewModel = ViewModel(repository: MemberRepository())
     
     override func viewDidLoad() {
         super.viewDidLoad()

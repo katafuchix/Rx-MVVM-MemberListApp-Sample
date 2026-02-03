@@ -15,6 +15,8 @@
 		314129532F323D1E00E30324 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 314129522F323D1E00E30324 /* SDWebImage */; };
 		314129552F323D1E00E30324 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 314129542F323D1E00E30324 /* SDWebImageMapKit */; };
 		314129652F32406000E30324 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 314129642F32406000E30324 /* RswiftLibrary */; };
+		3141299E2F3247DE00E30324 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 3141299D2F3247DE00E30324 /* RxTest */; };
+		314129D52F32499400E30324 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F93DC8285E0BB5007E65BB /* Member.swift */; };
 		31F93DB1285E0A77007E65BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F93DB0285E0A77007E65BB /* AppDelegate.swift */; };
 		31F93DB3285E0A77007E65BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F93DB2285E0A77007E65BB /* SceneDelegate.swift */; };
 		31F93DB5285E0A77007E65BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F93DB4285E0A77007E65BB /* ViewController.swift */; };
@@ -30,7 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3125F58F2F3237C60070E400 /* PBXContainerItemProxy */ = {
+		314129972F3247B000E30324 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 31F93DA5285E0A77007E65BB /* Project object */;
 			proxyType = 1;
@@ -40,7 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3125F5892F3237C60070E400 /* Rx-MVVM-MemberListApp-SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rx-MVVM-MemberListApp-SampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		314129932F3247B000E30324 /* Rx-MVVM-MemberListApp-SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rx-MVVM-MemberListApp-SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		31F93DAD285E0A77007E65BB /* Rx-MVVM-MemberListApp-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rx-MVVM-MemberListApp-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		31F93DB0285E0A77007E65BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31F93DB2285E0A77007E65BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,15 +59,27 @@
 		31F93DD5285E114D007E65BB /* MemberDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		314129CB2F3248CC00E30324 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Rx_MVVM_MemberListApp_SampleTests.swift,
+			);
+			target = 314129922F3247B000E30324 /* Rx-MVVM-MemberListApp-SampleTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		3125F58A2F3237C60070E400 /* Rx-MVVM-MemberListApp-SampleUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Rx-MVVM-MemberListApp-SampleUITests"; sourceTree = "<group>"; };
+		314129852F32465400E30324 /* Repository */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Repository; sourceTree = "<group>"; };
+		314129942F3247B000E30324 /* Rx-MVVM-MemberListApp-SampleTests */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (314129CB2F3248CC00E30324 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Rx-MVVM-MemberListApp-SampleTests"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3125F5862F3237C60070E400 /* Frameworks */ = {
+		314129902F3247B000E30324 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3141299E2F3247DE00E30324 /* RxTest in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				31F93DAF285E0A77007E65BB /* Rx-MVVM-MemberListApp-Sample */,
-				3125F58A2F3237C60070E400 /* Rx-MVVM-MemberListApp-SampleUITests */,
+				314129942F3247B000E30324 /* Rx-MVVM-MemberListApp-SampleTests */,
 				3125F57D2F3234550070E400 /* Frameworks */,
 				31F93DAE285E0A77007E65BB /* Products */,
 			);
@@ -108,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				31F93DAD285E0A77007E65BB /* Rx-MVVM-MemberListApp-Sample.app */,
-				3125F5892F3237C60070E400 /* Rx-MVVM-MemberListApp-SampleUITests.xctest */,
+				314129932F3247B000E30324 /* Rx-MVVM-MemberListApp-SampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +130,7 @@
 		31F93DAF285E0A77007E65BB /* Rx-MVVM-MemberListApp-Sample */ = {
 			isa = PBXGroup;
 			children = (
+				314129852F32465400E30324 /* Repository */,
 				31F93DCF285E0EC5007E65BB /* View */,
 				31F93DCA285E0DBD007E65BB /* ViewModel */,
 				31F93DC7285E0B96007E65BB /* Model */,
@@ -168,28 +183,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3125F5882F3237C60070E400 /* Rx-MVVM-MemberListApp-SampleUITests */ = {
+		314129922F3247B000E30324 /* Rx-MVVM-MemberListApp-SampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3125F5912F3237C60070E400 /* Build configuration list for PBXNativeTarget "Rx-MVVM-MemberListApp-SampleUITests" */;
+			buildConfigurationList = 314129992F3247B000E30324 /* Build configuration list for PBXNativeTarget "Rx-MVVM-MemberListApp-SampleTests" */;
 			buildPhases = (
-				3125F5852F3237C60070E400 /* Sources */,
-				3125F5862F3237C60070E400 /* Frameworks */,
-				3125F5872F3237C60070E400 /* Resources */,
+				3141298F2F3247B000E30324 /* Sources */,
+				314129902F3247B000E30324 /* Frameworks */,
+				314129912F3247B000E30324 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3125F5902F3237C60070E400 /* PBXTargetDependency */,
+				314129982F3247B000E30324 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				3125F58A2F3237C60070E400 /* Rx-MVVM-MemberListApp-SampleUITests */,
+				314129942F3247B000E30324 /* Rx-MVVM-MemberListApp-SampleTests */,
 			);
-			name = "Rx-MVVM-MemberListApp-SampleUITests";
+			name = "Rx-MVVM-MemberListApp-SampleTests";
 			packageProductDependencies = (
+				3141299D2F3247DE00E30324 /* RxTest */,
 			);
-			productName = "Rx-MVVM-MemberListApp-SampleUITests";
-			productReference = 3125F5892F3237C60070E400 /* Rx-MVVM-MemberListApp-SampleUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
+			productName = "Rx-MVVM-MemberListApp-SampleTests";
+			productReference = 314129932F3247B000E30324 /* Rx-MVVM-MemberListApp-SampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		31F93DAC285E0A77007E65BB /* Rx-MVVM-MemberListApp-Sample */ = {
 			isa = PBXNativeTarget;
@@ -203,6 +219,9 @@
 			);
 			dependencies = (
 				3141297C2F32428C00E30324 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				314129852F32465400E30324 /* Repository */,
 			);
 			name = "Rx-MVVM-MemberListApp-Sample";
 			productName = "Rx-MVVM-MemberListApp-Sample";
@@ -219,7 +238,7 @@
 				LastSwiftUpdateCheck = 2620;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
-					3125F5882F3237C60070E400 = {
+					314129922F3247B000E30324 = {
 						CreatedOnToolsVersion = 26.2;
 						TestTargetID = 31F93DAC285E0A77007E65BB;
 					};
@@ -250,13 +269,13 @@
 			projectRoot = "";
 			targets = (
 				31F93DAC285E0A77007E65BB /* Rx-MVVM-MemberListApp-Sample */,
-				3125F5882F3237C60070E400 /* Rx-MVVM-MemberListApp-SampleUITests */,
+				314129922F3247B000E30324 /* Rx-MVVM-MemberListApp-SampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3125F5872F3237C60070E400 /* Resources */ = {
+		314129912F3247B000E30324 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -276,10 +295,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3125F5852F3237C60070E400 /* Sources */ = {
+		3141298F2F3247B000E30324 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				314129D52F32499400E30324 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,14 +322,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3125F5902F3237C60070E400 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 31F93DAC285E0A77007E65BB /* Rx-MVVM-MemberListApp-Sample */;
-			targetProxy = 3125F58F2F3237C60070E400 /* PBXContainerItemProxy */;
-		};
 		3141297C2F32428C00E30324 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			productRef = 3141297B2F32428C00E30324 /* RswiftGenerateInternalResources */;
+		};
+		314129982F3247B000E30324 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 31F93DAC285E0A77007E65BB /* Rx-MVVM-MemberListApp-Sample */;
+			targetProxy = 314129972F3247B000E30324 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -333,10 +353,11 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3125F5922F3237C60070E400 /* Debug */ = {
+		3141299A2F3247B000E30324 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -344,10 +365,10 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "net.deskplate.Rx-MVVM-MemberListApp-SampleUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.deskplate.Rx-MVVM-MemberListApp-SampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -356,14 +377,15 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Rx-MVVM-MemberListApp-Sample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rx-MVVM-MemberListApp-Sample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Rx-MVVM-MemberListApp-Sample";
 			};
 			name = Debug;
 		};
-		3125F5932F3237C60070E400 /* Release */ = {
+		3141299B2F3247B000E30324 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -371,10 +393,10 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "net.deskplate.Rx-MVVM-MemberListApp-SampleUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.deskplate.Rx-MVVM-MemberListApp-SampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -382,7 +404,7 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Rx-MVVM-MemberListApp-Sample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rx-MVVM-MemberListApp-Sample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Rx-MVVM-MemberListApp-Sample";
 			};
 			name = Release;
 		};
@@ -559,11 +581,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3125F5912F3237C60070E400 /* Build configuration list for PBXNativeTarget "Rx-MVVM-MemberListApp-SampleUITests" */ = {
+		314129992F3247B000E30324 /* Build configuration list for PBXNativeTarget "Rx-MVVM-MemberListApp-SampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3125F5922F3237C60070E400 /* Debug */,
-				3125F5932F3237C60070E400 /* Release */,
+				3141299A2F3247B000E30324 /* Debug */,
+				3141299B2F3247B000E30324 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -684,6 +706,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 314118FE2F3233560030590F /* XCRemoteSwiftPackageReference "R.swift" */;
 			productName = "plugin:RswiftGenerateInternalResources";
+		};
+		3141299D2F3247DE00E30324 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 314118E92F3233390030590F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
