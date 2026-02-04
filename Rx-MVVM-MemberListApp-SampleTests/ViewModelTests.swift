@@ -57,6 +57,31 @@ class ViewModelTests: XCTestCase {
         let loadingEvents = loadingObserver.events.compactMap { $0.value.element }
         XCTAssertEqual(loadingEvents, [false, true, false])
     }
+    
+    func test_loadData_failure() {
+        // 1. 準備：エラーを返すように設定
+        mockRepository.shouldReturnError = true
+        
+        let loadingObserver = scheduler.createObserver(Bool.self)
+        let errorObserver = scheduler.createObserver(Bool.self) // エラーが届いたか監視
+        
+        viewModel.outputs.isLoading.subscribe(loadingObserver).disposed(by: disposeBag)
+        // エラーが発生したこと（ストリームにイベントが流れたか）を監視
+        viewModel.outputs.error.map { _ in true }.subscribe(errorObserver).disposed(by: disposeBag)
+
+        // 2. 実行
+        viewModel.loadData()
+        scheduler.advanceTo(10)
+
+        // 3. 検証
+        // ① isLoading の検証：エラーが起きても [false, true, false] と戻るべき
+        let loadingResults = loadingObserver.events.compactMap { $0.value.element }
+        XCTAssertEqual(loadingResults, [false, true, false], "エラー時もローディングは終了する必要があります")
+
+        // ② エラー通知の検証：イベントが1回飛んできているか
+        let errorEvents = errorObserver.events.compactMap { $0.value.element }
+        XCTAssertEqual(errorEvents.count, 1, "エラー通知が飛んできていません")
+    }
 }
 
 
@@ -67,6 +92,10 @@ final class MockMemberRepository: Rx_MVVM_MemberListApp_Sample.MemberRepositoryT
     var shouldReturnError = false  // エラーを発生させたい場合は true にする
     
     func fetchMembers() -> Observable<[Rx_MVVM_MemberListApp_Sample.Member]> {
+        if shouldReturnError {
+            // ActionError.underlyingError として扱われるように適当なエラーを返す
+            return .error(NSError(domain: "test", code: -1, userInfo: nil))
+        }
         return stubbedMembers
     }
 }
