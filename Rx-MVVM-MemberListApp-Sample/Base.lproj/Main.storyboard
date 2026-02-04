@@ -40,9 +40,6 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ymP-4F-fbC">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="48"/>
-                                            </activityIndicatorView>
                                         </subviews>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fys-d6-BQX">
@@ -119,7 +116,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="activityIndicator" destination="ymP-4F-fbC" id="9sx-7m-T7p"/>
                         <outlet property="loadButton" destination="zQC-41-dsb" id="epi-Yg-0hd"/>
                         <outlet property="tableView" destination="fys-d6-BQX" id="dfQ-zL-f5f"/>
                         <outlet property="timerLabel" destination="nS4-S9-oCr" id="rH1-wI-8hF"/>

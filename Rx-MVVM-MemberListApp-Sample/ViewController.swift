@@ -15,7 +15,6 @@ class ViewController: UIViewController {
 
     @IBOutlet var timerLabel: UILabel!
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var loadButton: UIButton!
     
     let viewModel = ViewModel(repository: MemberRepository())
@@ -27,7 +26,13 @@ class ViewController: UIViewController {
         self.setupViews()
         self.bind()
         
-        self.viewModel.inputs.trigger.onNext(())
+        // トリガ起動
+        //self.viewModel.inputs.trigger.onNext(())
+        
+        // バインド（購読）が成立したタイミングでトリガが起動される
+        /*Observable.just(()) // 一度だけストリームを流して完了
+            .bind(to: self.viewModel.inputs.trigger)
+            .disposed(by: rx.disposeBag)*/
     }
 
     func setupViews() {
@@ -35,7 +40,6 @@ class ViewController: UIViewController {
     }
     
     func bind() {
-        
         // メンバー一覧
         self.viewModel.outputs
             .members
@@ -62,24 +66,22 @@ class ViewController: UIViewController {
             .drive(MBProgressHUD.rx.isAnimating(view: self.view))
             .disposed(by: rx.disposeBag)
         
-        /*
-        // activityIndicator
-        self.viewModel.outputs
-            .members
-            .observe(on: MainScheduler.instance)
-            .map { $0.isEmpty }
-            .distinctUntilChanged() // true/false が切り替わった時だけアニメーションを呼ぶ
-            .subscribe(onNext: { [weak self] visible in
-                self?.setVisibleWithAnimation(self?.activityIndicator, visible)
-            })
-            .disposed(by: rx.disposeBag)
-        */
-        
         // 再読み込み
         // loadData()メソッドを介さず、triggerに直接流し込む
+        /*
         self.loadButton.rx.tap
             .bind(to: self.viewModel.inputs.trigger)
             .disposed(by: rx.disposeBag)
+        */
+        
+        // まとめて記述
+        // ボタンのタップ or 画面起動時のシグナル、どちらかが来たら trigger へ
+        Observable.merge([
+            self.loadButton.rx.tap.asObservable(),
+            Observable.just(()) // 起動時の一発
+        ])
+        .bind(to: self.viewModel.inputs.trigger)
+        .disposed(by: rx.disposeBag)
     }
     
     private func setVisibleWithAnimation(_ v: UIView?, _ s: Bool) {
